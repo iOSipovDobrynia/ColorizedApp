@@ -28,22 +28,22 @@ class ViewController: UIViewController {
     // MARK: IBActions
     @IBAction func redSliderAction() {
         redValueLabel.text = round(redSlider.value).formatted()
-        changeColor(of: rgbView)
+        changeColor()
     }
     
     @IBAction func greenSliderAction() {
         greenValueLabel.text = round(greenSlider.value).formatted()
-        changeColor(of: rgbView)
+        changeColor()
     }
     
     @IBAction func blueSliderAction() {
         blueValueLabel.text = round(blueSlider.value).formatted()
-        changeColor(of: rgbView)
+        changeColor()
     }
     
     // MARK: private methods
-    private func changeColor(of view: UIView) {
-        view.backgroundColor = UIColor(
+    private func changeColor() {
+        rgbView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value) / 255,
             green: CGFloat(greenSlider.value) / 255,
             blue: CGFloat(blueSlider.value) / 255,
