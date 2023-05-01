@@ -11,9 +11,11 @@ class ViewController: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet var rgbView: UIView!
+    
     @IBOutlet var redValueLabel: UILabel!
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
+    
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
         changeColor(of: rgbView)
     }
     
-    // MARK: privat methods
+    // MARK: private methods
     private func changeColor(of view: UIView) {
         view.backgroundColor = UIColor(
             red: CGFloat(redSlider.value) / 255,
